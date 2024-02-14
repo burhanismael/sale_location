@@ -9,15 +9,15 @@
         Stock Sales
     """,
 
-    'author': "Alpesh Raval",
+    'author': 'Pruthvish',
     'website': "",
 
     'category': 'Sales',
-    'version': '0.1',
+    'version': '17.0.0.1',
 
     'depends': ['sale', 'sale_management', 'stock'],
 
     'data': [
-'views/sale_order_view.xml'
+        'views/sale_order_view.xml'
     ],
 }

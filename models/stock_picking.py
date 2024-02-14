@@ -6,6 +6,7 @@ class StockPicking(models.Model):
 
     def action_confirm(self):
         res = super(StockPicking, self).action_confirm()
-        if self.sale_id:
-            self.location_id = self.sale_id.delivery_location_id
+        for data in self:
+            for line in data.move_ids:
+                line.location_id = line.sale_line_id.delivery_location_id.id
         return res
