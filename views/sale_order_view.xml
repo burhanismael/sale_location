@@ -11,6 +11,18 @@
                 </xpath>
             </field>
         </record>
+
+        <record id="view_wp_stock_picking_inherit" model="ir.ui.view">
+            <field name="name">stock.picking.inherit</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <!--            <field name="inherit_id" ref="sale.view_order_form"/>-->
+            <field name="arch" type="xml">
+                <xpath expr="//tree/field[@name='location_id']" position="attributes">
+                    <attribute name="invisible">0</attribute>
+                </xpath>
+            </field>
+        </record>
     </data>
 
 </odoo>
